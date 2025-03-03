@@ -6,16 +6,25 @@
      * Password Generator class is responsible for generating random passwords, which upholds the strong password criterias.
      * 
      * Strong Password Criterias
-     * 1. Password should be 10 characters or longer
+     * 1. Password should be minimum 10 characters and maximum 20
      * 2. Password should contain both uppercase and lowercase letters, where there is at least 1 uppercase letter
      * 3. Password should contain at least 1 special character
      * 4. Password must not contain string literals equal to literals from the bad words collection (like 'qwwerty', 'test', '123456' etc.)
+     * 5. Password must contain at least 1 number
      */
     public class PasswordGenerator : IPasswordGenerator
     {
         private readonly char[] _letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z'];
         private readonly char[] _specialCharacters = ['@', '!', '#', '$', '%', '/', '&', '(', ')', '=', '?', '[', ']', '{', '}', '-', '_', '*', '^', '+', '<', '>'];
         private readonly string[] _badWords = ["qwerty", "test", "123456", "hello", "world", "password", "admin"];
+
+        public string GenerateCustomPassword(int passwordLength, int numberOfUppercaseLetters, int numberOfSpecialCharacters, int numberOfNumerals)
+        {
+            throw new NotImplementedException();
+            //string generatedPassword = string.Empty;
+
+            //return generatedPassword;
+        }
 
         /**
          * Generate a random password of 16 characters, which upholds the strong password criterias
